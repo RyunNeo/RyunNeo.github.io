@@ -1,4 +1,4 @@
-# 红了的柠檬
+# 爱吃小饼干吧
 
 一个部署到 `GitHub Pages` 的个人开发者博客，基于 `Next.js + MDX` 构建，使用纯 Markdown/MDX 维护文章。
 

@@ -55,7 +55,7 @@ export const siteConfig: SiteConfig = {
     },
   ],
   author: {
-    name: "RyunNeo",
+    name: "爱吃小饼干吧",
     role: "前端工程师 / 跨端开发者",
     motto: "把复杂的问题写清楚，把能落地的方案做出来。",
     avatar: "https://avatars.githubusercontent.com/u/152515076?v=4",

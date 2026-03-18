@@ -1,0 +1,69 @@
+import type { SiteConfig } from "./types";
+
+export const siteConfig: SiteConfig = {
+  name: "红了的柠檬",
+  description: "一个个人开发者的综合型博客，记录前端开发、跨端实践、项目复盘与长期思考。",
+  url: "https://ryunneo.github.io",
+  githubUsername: "RyunNeo",
+  keywords: ["个人博客", "前端开发", "React", "Vue", "uni-app", "React Native"],
+  heroTagline: "做了 6 年前端，持续在 Web 与跨端之间打磨更顺手的产品体验。",
+  heroDescription:
+    "这里会记录我在 React、Vue、uni-app 和 React Native 里的实践经验，也会整理工程优化、项目落地和前端思考中值得沉淀的内容。",
+  highlights: [
+    {
+      label: "工作经验",
+      value: "6 年前端开发经验，长期参与真实项目落地与迭代。",
+    },
+    {
+      label: "技术方向",
+      value: "React、Vue、uni-app、React Native，覆盖 Web 与跨端场景。",
+    },
+    {
+      label: "内容主题",
+      value: "项目复盘、工程实践、跨端开发、前端体验优化。",
+    },
+  ],
+  author: {
+    name: "RyunNeo",
+    role: "前端工程师 / 跨端开发者",
+    motto: "把复杂的问题写清楚，把能落地的方案做出来。",
+    avatar: "https://avatars.githubusercontent.com/u/152515076?v=4",
+    avatarAlt: "RyunNeo avatar",
+    github: "https://github.com/RyunNeo",
+  },
+  navigation: [
+    { label: "首页", href: "/" },
+    { label: "博客", href: "/blog" },
+    { label: "分类", href: "/categories" },
+    { label: "标签", href: "/tags" },
+    { label: "项目", href: "/projects" },
+    { label: "关于", href: "/about" },
+    { label: "搜索", href: "/search" },
+  ],
+  socialLinks: [
+    { label: "GitHub", href: "https://github.com/RyunNeo" },
+    { label: "RSS", href: "/rss.xml" },
+  ],
+  about: {
+    intro:
+      "我是一名前端工程师，已经工作 6 年，主要技术栈包括 React、Vue、uni-app 和 React Native。过去这些年，我一直在做 Web 和跨端相关的开发工作，也逐渐形成了自己对工程质量、用户体验和长期维护的理解。",
+    details: [
+      "这个博客主要用来记录我在前端开发中的实践和思考，包括 React、Vue、uni-app、React Native 相关的项目经验，也会整理一些工程化、跨端开发和性能优化方面的内容。",
+      "做前端 6 年之后，我越来越在意的不只是能不能做出来，而是方案是否清晰、体验够不够好、代码能不能稳定维护。这些也是我想持续写下来的原因。",
+      "我希望这里不只是一个文章列表，而是一个可以长期积累内容、展示项目和表达技术理解的个人空间。",
+    ],
+    techStack: [
+      "React",
+      "Vue",
+      "uni-app",
+      "React Native",
+      "Next.js",
+      "TypeScript",
+    ],
+    currently: [
+      "持续沉淀前端与跨端开发经验",
+      "整理更适合长期写作的技术内容体系",
+      "打磨项目展示方式，让博客更像自己的个人空间",
+    ],
+  },
+};

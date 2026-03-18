@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 红了的柠檬
 
-## Getting Started
+一个部署到 `GitHub Pages` 的个人开发者博客，基于 `Next.js + MDX` 构建，使用纯 Markdown/MDX 维护文章。
 
-First, run the development server:
+## 特性
+
+- `Next.js App Router` + 静态导出
+- `MDX` 文章系统，支持代码高亮与目录
+- 首页展示个人介绍、精选文章与精选项目
+- 分类、标签、搜索、RSS、站点地图
+- 明暗主题切换
+- `GitHub Actions` 自动部署到 `GitHub Pages`
+
+## 本地开发
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+打开 [http://localhost:3000](http://localhost:3000) 查看站点。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 构建静态站点
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+构建完成后会输出到 `out/`，并额外生成：
 
-To learn more about Next.js, take a look at the following resources:
+- `out/rss.xml`
+- `out/sitemap.xml`
+- `out/robots.txt`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 内容维护
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 文章位于 `src/content/posts`
+- 项目补充配置位于 `src/content/projects.ts`
+- 站点信息位于 `src/lib/site-config.ts`
+- 常用修改说明位于 `docs/customize-and-deploy.md`
 
-## Deploy on Vercel
+## 部署说明
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 将仓库名设置为 `RyunNeo.github.io`
+- 推送到 `main` 分支
+- 在 GitHub 仓库中启用 `Pages`
+- Actions 工作流会自动构建并发布
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+如需切换到项目子路径部署，可设置环境变量 `NEXT_PUBLIC_BASE_PATH=/repo-name`。

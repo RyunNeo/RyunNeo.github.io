@@ -14,6 +14,17 @@ export type SiteConfig = {
   url: string;
   githubUsername: string;
   keywords: string[];
+  profile: {
+    experienceYears: number;
+    headlineStats: Array<{
+      label: string;
+      value: string;
+    }>;
+    strengths: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
   heroTagline: string;
   heroDescription: string;
   highlights: SiteHighlight[];

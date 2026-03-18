@@ -6,6 +6,37 @@ export const siteConfig: SiteConfig = {
   url: "https://ryunneo.github.io",
   githubUsername: "RyunNeo",
   keywords: ["个人博客", "前端开发", "React", "Vue", "uni-app", "React Native"],
+  profile: {
+    experienceYears: 6,
+    headlineStats: [
+      {
+        label: "经验年限",
+        value: "6 年前端开发",
+      },
+      {
+        label: "核心栈",
+        value: "React / Vue / uni-app / React Native",
+      },
+      {
+        label: "关注方向",
+        value: "Web、跨端、工程化、体验优化",
+      },
+    ],
+    strengths: [
+      {
+        title: "Web 开发",
+        description: "基于 React 和 Vue 做业务页面、后台系统和内容型站点，兼顾交互与长期维护。",
+      },
+      {
+        title: "跨端开发",
+        description: "使用 uni-app 和 React Native 处理多端交付，让同一套思路可以落到更多场景里。",
+      },
+      {
+        title: "工程与体验",
+        description: "关注可维护性、开发效率和用户体验，不只把功能做出来，也在意后续是否稳定顺手。",
+      },
+    ],
+  },
   heroTagline: "做了 6 年前端，持续在 Web 与跨端之间打磨更顺手的产品体验。",
   heroDescription:
     "这里会记录我在 React、Vue、uni-app 和 React Native 里的实践经验，也会整理工程优化、项目落地和前端思考中值得沉淀的内容。",

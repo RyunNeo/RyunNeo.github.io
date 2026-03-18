@@ -8,7 +8,19 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+    <div className="space-y-6">
+      <section className="grid gap-4 md:grid-cols-3">
+        {siteConfig.profile.headlineStats.map((item) => (
+          <div key={item.label} className="surface-card rounded-[1.5rem] p-5">
+            <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--muted)]">
+              {item.label}
+            </p>
+            <p className="mt-3 text-sm leading-7">{item.value}</p>
+          </div>
+        ))}
+      </section>
+
+      <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
       <section className="surface-card rounded-[2rem] px-6 py-8 sm:px-8">
         <p className="text-xs uppercase tracking-[0.24em] text-[color:var(--accent)]">About</p>
         <h1 className="mt-4 font-serif text-4xl tracking-tight sm:text-5xl">关于我</h1>
@@ -54,6 +66,23 @@ export default function AboutPage() {
         </section>
 
         <section className="surface-card rounded-[1.75rem] p-6">
+          <p className="text-sm font-semibold">我更擅长什么</p>
+          <div className="mt-4 space-y-3">
+            {siteConfig.profile.strengths.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--background)] px-4 py-4"
+              >
+                <p className="font-medium">{item.title}</p>
+                <p className="mt-2 text-sm leading-7 text-[color:var(--muted)]">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="surface-card rounded-[1.75rem] p-6">
           <p className="text-sm font-semibold">联系与链接</p>
           <div className="mt-4 space-y-3 text-sm">
             {siteConfig.socialLinks.map((link) => (
@@ -69,6 +98,7 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
+      </div>
       </div>
     </div>
   );

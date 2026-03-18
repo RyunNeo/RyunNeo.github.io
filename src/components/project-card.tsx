@@ -17,9 +17,16 @@ export function ProjectCard({ project, compact = false }: ProjectCardProps) {
           </h3>
           <p className="mt-3 text-sm leading-7 text-[color:var(--muted)]">{project.description}</p>
         </div>
-        <span className="inline-flex min-h-10 items-center rounded-full bg-[color:var(--accent-soft)] px-3 text-xs font-medium text-[color:var(--accent)]">
-          {project.source === "github" ? "GitHub" : "Local"}
-        </span>
+        <div className="flex flex-col items-end gap-2">
+          {project.featured ? (
+            <span className="inline-flex min-h-9 items-center rounded-full bg-[color:var(--foreground)] px-3 text-xs font-medium text-[color:var(--background)]">
+              精选
+            </span>
+          ) : null}
+          <span className="inline-flex min-h-9 items-center rounded-full bg-[color:var(--accent-soft)] px-3 text-xs font-medium text-[color:var(--accent)]">
+            {project.source === "github" ? "GitHub" : "Local"}
+          </span>
+        </div>
       </div>
       <div className="mt-5 flex flex-wrap gap-2">
         {project.techStack.map((tech) => (

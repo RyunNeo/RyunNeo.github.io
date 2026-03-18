@@ -123,8 +123,8 @@ export default async function Home() {
         <div className="space-y-5">
           <SectionHeading
             eyebrow="精选项目"
-            title="正在打磨的作品"
-            description="从 GitHub 自动读取项目，同时保留手工整理的说明。"
+            title="值得展示的项目与作品"
+            description="只展示真正想放进个人主页里的内容，保留手工整理过的介绍与重点。"
             href="/projects"
             hrefLabel="查看全部项目"
           />

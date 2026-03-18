@@ -15,8 +15,8 @@ export default async function ProjectsPage() {
     <div className="space-y-10">
       <SectionHeading
         eyebrow="Projects"
-        title="把做过的东西认真摆出来"
-        description="项目数据来自 GitHub，同时支持手动补充中文描述、技术栈和展示顺序。"
+        title="把想展示的东西认真摆出来"
+        description="这里展示我真正希望放进个人主页里的项目与作品，并支持按需隐藏不想公开陈列的仓库。"
       />
       <div className="grid gap-5 md:grid-cols-2">
         {projects.map((project) => (

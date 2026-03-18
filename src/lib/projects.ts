@@ -1,5 +1,5 @@
 import { cache } from "react";
-import { projectOverrides } from "@/content/projects";
+import { hiddenProjectRepos, projectOverrides } from "@/content/projects";
 import { siteConfig } from "./site-config";
 import type { GitHubRepo, Project } from "./types";
 
@@ -29,6 +29,7 @@ async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
 }
 
 function mergeProjects(repos: GitHubRepo[]) {
+  const hiddenRepoSet = new Set(hiddenProjectRepos.map((repo) => repo.toLowerCase()));
   const repoMap = new Map(repos.map((repo) => [repo.name, repo]));
 
   const overrideProjects: Project[] = projectOverrides.map((override) => {
@@ -49,11 +50,12 @@ function mergeProjects(repos: GitHubRepo[]) {
   const automaticProjects: Project[] = repos
     .filter((repo) => !repo.archived)
     .filter((repo) => !repo.fork)
+    .filter((repo) => !hiddenRepoSet.has(repo.name.toLowerCase()))
     .filter((repo) => !overrideProjects.some((project) => project.repo === repo.name))
     .map((repo) => ({
       repo: repo.name,
       name: repo.name,
-      description: repo.description ?? "来自 GitHub 的项目展示卡片。",
+      description: repo.description ?? "来自 GitHub 的项目展示。",
       techStack: repo.topics.length > 0 ? repo.topics : [repo.language ?? "GitHub"],
       demoUrl: repo.homepage ?? undefined,
       htmlUrl: repo.html_url,
